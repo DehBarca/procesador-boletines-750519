@@ -130,7 +130,7 @@ jobs:
             -t ${{ steps.docker-meta.outputs.ecr-registry }}/${{ steps.docker-meta.outputs.image-name }}:${{ steps.docker-meta.outputs.image-tag }} \
             -t ${{ steps.docker-meta.outputs.ecr-registry }}/${{ steps.docker-meta.outputs.image-name }}:${{ steps.docker-meta.outputs.date-tag }} \
             -t ${{ steps.docker-meta.outputs.ecr-registry }}/${{ steps.docker-meta.outputs.image-name }}:${{ steps.docker-meta.outputs.commit-tag }} \
-            -f Dockerfile.mostrador .
+            -f Dockerfile .
       
       - name: Push image to Amazon ECR
         run: |
